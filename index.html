@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Notepad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        textarea {
+            width: calc(100% - 22px);
+            height: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            font-size: 16px;
+        }
+        select, button {
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Professional Notepad</h1>
+        <textarea id="noteArea" placeholder="Start writing your notes here..."></textarea>
+        <br>
+        <select id="formatSelect">
+            <option value="txt">Plain Text (.txt)</option>
+            <option value="html">HTML (.html)</option>
+            <option value="md">Markdown (.md)</option>
+        </select>
+        <button onclick="saveNote()">Save Note</button>
+        <button onclick="openNote()">Open Note</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
